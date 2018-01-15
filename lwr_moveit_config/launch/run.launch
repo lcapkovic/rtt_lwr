@@ -15,12 +15,12 @@
     <!-- Tools -->
     <arg name="load_base" default="true" />
     <arg name="load_ati_sensor" default="true" />
-    <arg name="load_calib_tool" default="true" />
+    <arg name="load_calib_tool" default="false" />
     <arg name="load_table" default="true" />
-    <arg name="load_handle" default="true" />
+    <arg name="load_handle" default="false" />
     <arg name="load_laser" default="false" />
     <arg name="load_weight" default="false" />
-    <arg name="load_head_cam" default="true" />
+    <arg name="load_head_cam" default="false" />
     <arg name="load_screwdriver" default="true" />
     <!-- Gazebo -->
     <arg name="gazebo_gui" default="false"/>

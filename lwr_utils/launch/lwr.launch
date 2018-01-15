@@ -131,4 +131,6 @@
     <arg name="robot_description_upload_file" value="$(arg robot_description_upload_file)"/>
 </include>
 
+<include if="$(arg sim)" file="$(find experiment)/launch/spawn_experiment.launch"/>
+
 </launch>
