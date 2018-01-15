@@ -1,0 +1,23 @@
+<launch>
+    <!-- send urdfs to param server -->
+    <param name="/experiment/rails_description" textfile="$(find experiment)/urdf/rails.urdf" />
+    <param name="/experiment/cube_description" textfile="$(find experiment)/urdf/cube.urdf" />
+ 
+    <!-- push experiment_description to factory and spawn robot in gazebo -->
+    <!-- <node name="spawn_experiment" pkg="gazebo" type="spawn_model" args="-urdf -param experiment_description -z 0.01 -model rails" respawn="false" output="screen" /> -->
+    <node name="spawn_rails" pkg="gazebo_ros"
+    type="spawn_model"
+    args="-param /experiment/rails_description -urdf
+        -model rails
+        -x 0 -y -1.31 -z 1"
+    respawn="false" output="screen" >
+    </node>
+
+    <node name="spawn_cube" pkg="gazebo_ros"
+    type="spawn_model"
+    args="-param /experiment/cube_description -urdf
+        -model cube
+        -x 0 -y -0.86 -z 1.1 -R 0 -P 0.7854 -Y 0"
+    respawn="false" output="screen" >
+    </node>
+</launch>

@@ -2,5 +2,5 @@ import("rtt_rospack")
 runScript(ros.find("lwr_utils")+"/scripts/utils.ops")
 
 loadRobot(getRobotName(), isSim(), true)
-
+setRobotInitialJointConfiguration(-0.53, 0.88, 0, -2.09, 0, -1.42, 0)
 loadROSControl(true)

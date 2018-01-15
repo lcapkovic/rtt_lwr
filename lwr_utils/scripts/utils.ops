@@ -513,6 +513,6 @@ global string loadRobot(string robot_name,bool is_sim,bool start_component)
     loadKRLTool(true)
 
     if(is_sim) then
-        setJointImpedanceControlMode();
+        setJointTorqueControlMode();
     return robot_name;
 }
